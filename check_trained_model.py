@@ -7,7 +7,7 @@ import os, random, cv2
 from detectron2.data.datasets import register_coco_instances
 
 register_coco_instances("my_dataset_train", {}, "CoCo\\train.json", "CoCo\\train_img")
-im = cv2.imread("CoCo/val_img/labelled_data2/00025.png")
+im = cv2.imread("CoCo/train_img/labelled_data2/01826.png")
 
 cfg = get_cfg()
 cfg.merge_from_file("config.yaml")

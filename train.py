@@ -21,8 +21,8 @@ if __name__ == '__main__':
     cfg.DATALOADER.NUM_WORKERS = 2
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")  # Let training initialize from model zoo
     cfg.SOLVER.IMS_PER_BATCH = 2  # Adjust batch size based on your GPU memory
-    cfg.SOLVER.BASE_LR = 0.00005  # pick a good learning rate
-    cfg.SOLVER.MAX_ITER = 20000   # Number of iterations to train
+    cfg.SOLVER.BASE_LR = 0.0001  # pick a good learning rate
+    cfg.SOLVER.MAX_ITER = 5000   # Number of iterations to train
     cfg.SOLVER.STEPS = []        # Do not decay learning rate
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128   # RoIHead batch size, can increase if you have enough memory
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = 4
